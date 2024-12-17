@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/static/animate.min.css">
+    <title>Admin</title>
+    <style>
+        .bg{
+            background-color: teal;
+            min-height:800px;
+        }
+        .side-logout{
+            padding-top: 100px;
+        }
+        .nav-area, a{
+            font-size: 18px;
+        }
+        .nav-area, a:hover{
+            color:darkgreen;
+        }
+        .style-metrics{
+            background-color: beige;
+            min-height: inherit;
+            border-radius: 10px;
+        }
+        .style-metrics1{
+            background-color: rgba(76, 124, 124, 0.288);
+            min-height: inherit;
+            border-radius: 10px;
+        }
+        .style-metrics2{
+            background-color:mintcream;
+            min-height: inherit;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 bg">
+                <h3 class="text-center text-light pt-3">HomeHelp</h3>
+                <p class="text-center text-light">Management Dashboard</p>
+                <hr>
+                <nav class="col-md nav flex-column">
+                    <p class="text-light p-2">Main Menu</p>
+                    <div class="d-flex p-3 nav-area">
+                        <i class="fa-solid fa-bars pt-3 text-light"></i>
+                        <a class="nav-link active text-light" aria-current="page" href="#">Dashboard</a>
+                    </div>
+                    <div class="col-md d-flex p-3 nav-area">
+                        <i class="fa-solid fa-users text-light pt-3"></i>
+                        <a class="nav-link text-light" href="#">Users</a>
+                    </div>
+                    <div class="d-flex p-3 nav-area">
+                        <i class="fa-regular fa-clock text-light pt-3"></i>
+                        <a class="nav-link text-light" href="#">Reports</a>
+                    </div>
+                    <div class="d-flex p-3 nav-area">
+                        <i class="fa-solid fa-gear text-light pt-3"></i>
+                    <a class="nav-link text-light" href="#">Settings</a>
+                    </div>
+                    <div class="d-flex side-logout p-3 nav-area"> 
+                        <i class="fa-solid fa-right-from-bracket pt-3 text-light"></i>
+                        <a class="nav-link disabled text-light" aria-disabled="true">logout</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="col-md-10">
+                <nav class="navbar navbar-expand-lg bg-body-light">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">Welcome Back,{Admin}</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <form class="d-flex ms-auto" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <div>
+                            <span class="mx-start text-tertiary p-3">|</span>
+                            <i class="fa-regular fa-message p-2"></i>
+                            <i class="fa-regular fa-bell p-3"></i>
+                          </div>
+                    </div>
+                      
+                    </div>
+                  </nav>
+
+                  <div class="row justify-content-around">
+                    <h2 class="mt-5 p-2">Key metrics</h2>
+                    <div class="col-md-3 ">
+                        <div class="style-metrics1 pt-5 shadow">
+                            <h4 class="text-center ">Total Users:</h4>
+                            <h4 class="text-center pb-5">100</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="style-metrics2 pt-5 shadow">
+                            <h4 class="text-center">Active Users:</h4>
+                            <h4 class="text-center pb-5">75</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="style-metrics pt-5 shadow">
+                            <h4 class="text-center">New Bookings:</h4>
+                            <h4 class="text-center pb-5">15</h4>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h2 class="mt-5 p-2">User Management</h2>
+                    <div class="col-md">
+
+                    </div>
+                  </div>
+                
+            </div>
+            
+            
+        </div>
+
+    </div>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

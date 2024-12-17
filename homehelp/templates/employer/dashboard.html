@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/static/animate.min.css">
+    <title>Document</title>
+    <style>
+        .bg{
+            background-color: teal;
+        }
+        .image{
+            width: 50px;
+            height:50px;
+            border-radius:100%;
+        }
+        .head h1{
+            padding-left: 50px;
+        }
+        .user{
+            padding-left: 300px;
+        }.pic{
+            width: 100px;
+            height:100px;
+            border-radius:50%
+        }
+        .helper_bg{
+            background-color:rgb(245, 247, 246);
+            min-height: 600px;
+        }
+        .helper{
+            padding-left: 50px;
+        }
+        .pad-button{
+            padding-left:600px;
+        }
+        .cancel{
+            padding-left: 1500px;
+        }
+        .padbutn{
+            padding-left: 50px;
+        }
+        .pic1{
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row pt-3 head">
+            <div class="col-md-6">
+                <h1 class="">HomeHelp</h1>
+            </div>
+            <div class="col-md-1">
+                <div class="text-center">
+                    <a href="" class="text-decoration-none"><i class="fa-regular fa-message fa-1x pt-3" style="color:black"></i></a>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="text-center">
+                    <a href="" class="text-decoration-none"><i class="fa-regular fa-bell fa-1x pt-3" style="color:black"></i></a>
+                </div>
+            </div>
+            <div class="col-md ml-4">
+                <div class="user">
+                    <img src="/static/images/icons/helps.png" alt=" user picture" class="image">
+                </div>
+            </div>
+        </div>
+
+        <!-- search  -->
+        <div class="row justify-content-center mt-4 bg">
+            <div class="col-md-3 pt-5 pb-5">
+                <form action="">
+                    <label for="" class="pb-2">Search by profession</label>
+                    <div>
+                        <select name="" id="" class="form-control-lg">
+                            <option value=""></option>
+                            <option value="">Auto Mechanic</option>
+                            <option value="">Cleaner Service</option>
+                            <option value="">Aluminium Service</option>
+                        </select>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="col-md-3 pt-5 pb-5">
+                <label for="" class="pb-2">Search by area</label>
+                <div>
+                    <select name="" id="" class="form-select-lg">
+                        <option value=""></option>
+                        <option value="">Egbeda</option>
+                        <option value="">Ikorodu</option>
+                        <option value="">Ketu bus stop</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3 pt-5 pb-5">
+                <label for="" class="pb-2">Search by state</label>
+                <div>
+                    <select name="" id="" class="form-control-lg">
+                        <option value=""></option>
+                        <option value="">Lagos state</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    
+    <div class="container-fluid helper_bg">
+        <h2 class="pt-4 p-2">All Helpers</h2>  
+        <div class="row m-5 bg-light shadow">
+            <div class="col-md-2 p-3">
+                <div class="helper">
+                    <img src="/static/images/help1.jpg" alt="helper pic" class="pic">
+                </div>
+            </div>
+            <div class="col-md-2 p-3">
+                <h4>Adebankemo Michael</h4>
+                <p><i class="fa-solid fa-star"></i>5.0(1 review)</p>
+            </div>
+            <div class="col-md pt-5 pad-button">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                 View Profile
+                 </button>
+            </div>
+        </div>
+
+        <div class="row m-5 bg-light shadow ">
+            <div class="col-md-2 p-3">
+                <div class="helper">
+                    <img src="/static/images/help1.jpg" alt="helper pic" class="pic">
+                </div>
+            </div>
+            <div class="col-md-2 p-3">
+                <h4>Adebankemo Michael</h4>
+                <p><i class="fa-solid fa-star"></i>5.0(1 review)</p>
+            </div>
+            <div class="col-md pt-5 pad-button">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                 View Profile
+                 </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+          <button type="button" class="btn-close cancel" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="">
+                        <img src="/static/images/help1.jpg" alt="helper" class="pic">
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div>
+                        <p class="pt-2">Adebankemo Michael</p>
+                        <p><i class="fa-solid fa-star"></i>5.0 (1 review)</p>
+                    </div>
+                </div>
+                <div class="col-md padbutn">
+                    <button class="btn btn-success pt-3 p-3">Hire Now</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md pt-3">
+                    <h3>About me</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Magnam atque, placeat autem odit veniam quasi minima maxime 
+                    itaque recusandae nemo!</p>
+                    <h3>Skilled Proffession</h3>
+                    <p>Plumbing Service</p>
+                    <h3>Location</h3>
+                    <p>Lagos</p>
+                    <h3>Years Of Practice </h3>
+                    <p>6 Years</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md d-flex">
+                    <div class="">
+                        <img src="/static/images/icons/helps.png" alt="" class="pic">
+                    </div>
+                    <div>
+                        <img src="/static/images/icons/helps.png" alt="" class="pic">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <h3>Review</h3>
+                <div class="col-md d-flex">
+                    <img src="/static/images/icons/helps.png" alt="employer pic" class="pic1">
+                    <p class="p-2">He did a great job fixing my toilet drainage,would use him again</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-success"> Hire Now </button>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

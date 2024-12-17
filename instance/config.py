@@ -1,0 +1,4 @@
+DBPASS='123456'
+SECRET_KEY='9Pkq_EJ2KEY'
+SQLALCHEMY_DATABASE_URI='mysql+mysqlconnector://root@localhost/homehelp_db'
+SQLALCHEMY_TRACK_MODIFICATIONS=True

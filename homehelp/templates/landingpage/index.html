@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="static/fontawesome/css/all.css">
+    <link rel="stylesheet" href="static/animate.min.css">
+    <title>HomeHelp</title>
+    <style>
+
+      *{
+	      padding:0px;
+	      margin:0px;
+	      box-sizing:border-box;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
+       
+       .pad{
+        padding-left: 100px;
+       }
+
+        .overlay{
+            background-image:url(/static/images/index-bg.jpg);
+            background-size: cover;
+            max-height: 600px;
+        }
+
+        .overlay h1{
+            font-size: 60px;
+        }
+
+        #search{
+            background-color: teal;
+            color:white;
+            border:none;
+            border-radius:0px 30px 30px 0px ;
+            padding:20px 30px;
+            cursor:pointer;
+        }
+
+        #search:hover{
+          background-color:rgb(3, 70, 70);
+        }
+
+        #search-input{
+            flex-grow: 1;
+            border-radius: 30px 0px 0px 30px;
+            border: 1px solid teal;
+        }
+
+        #search-input:focus{
+          border:1px solid teal !important;
+          border:none !important;
+        }
+
+        .logo{
+          font-size: 40px;
+        }
+        
+        .style-helps{
+            padding-right: 100px;
+            border: 1px solid teal;
+            color: teal;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-right: 100px;
+        }
+
+        .style-link{
+          padding: 10px;
+          font-size: 18px;
+        }
+       
+        .contain{
+          justify-content: center;
+          
+        }
+       
+        .btn:hover{
+          border: none;
+        }
+        .h1{
+          border:1px
+        }
+       
+        .apply{
+          padding-top: 20px;
+          padding-left: 50px;
+          border-radius: 30px 0px 0px 30px;
+        }
+
+        .bg{
+          background-color:lavender;
+          min-height: 300px;
+          border-radius: 10px;
+          margin: 20px;
+        }
+
+        .estimate{
+          background-color: rgb(244, 250, 245);
+          margin-top: 100px;
+        }
+        .estimate,span{
+          font-size: 22px;
+        }
+
+        .span1{
+          color: teal;
+          font-size: 25px;
+        }
+        .helps{
+          width:100px;
+          height:100px;
+          border-radius:50%;
+        }
+
+        .help{
+          padding-top: 20px;
+          background-color: rgb(245, 247, 246);
+        }
+        
+        .help button{
+          background-color:teal
+        }
+
+        .helpers button:hover{
+          background-color:rgb(3, 70, 70);
+        }
+        .helpers h2{
+          font-size: 42px;
+        }
+
+        .resizeicon{
+          width:30px;
+        }
+        .color{
+          color: teal;
+          font-size: 20px;
+        }
+
+        .resize p{
+          font-size: 20px;
+        }
+
+        .satisfaction span{
+          font-size:40px;
+        }
+        .satisfaction h1{
+          font-size: 40px;
+        }
+
+        .reviews,.satisfaction{
+          padding-left: 170px;
+        }
+      
+        .how_bg{
+          background-color:beige;
+        }
+        
+
+        .color_star{
+          color: gold;
+        }
+
+        .footer-bg{
+          background-color:rgb(103, 114, 126);
+          padding-left: 100px;
+          padding-right: 100px;
+        }
+        .footer-bg h4{
+          color:rgb(160,169,184);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="pad">
+        <a class="navbar-brand logo" href="#">HomeHelp</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto links">
+          <a class="nav-link style-link" href="/registration/">Sign up/Login</a>
+          <a class="nav-link style-helps" href="/helper/reg/">Become an Helper</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- endnav -->
+          
+      
+      <hr>
+
+    <div class="container-fluid overlay">
+        <div class="row ">
+            <div class="col-md-12 pt-5">
+                <h1 class="text-center pt-5">Book trusted help <br>for home tasks</h1>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-3 pt-5">
+                <div class="search-container d-flex">
+                    <input type="text" placeholder="what do you need help with?" id="search-input" class="form-control-lg p-3 rmb" name="search"> 
+                    <button class="btn-primary pl-5 " id="search"><i class="fa-solid fa-magnifying-glass fa-1x text-light"></i></button>
+                </div>
+                <p id="show"></p>
+              </div>
+          </div>
+        
+          <div class="row pt-4">
+            <div class="col-md offset-md-1 pt-5">
+              <button class="btn text-primary" id="btn1"><i class="fa-solid fa-wrench fa-2x alert-primary"></i><br>Assembly</button>
+            </div>
+            <div class="col-md pt-5">
+              <button class="btn" id="btn2"><i class="fa-solid fa-truck fa-2x"></i><br>Moving</button>
+            </div>
+            <div class="col-md pt-5">
+              <button class="btn" id="btn3"><i class="fa-solid fa-toolbox fa-2x "></i><br>Home Repairs</button>
+            </div>
+            <div class="col-md pt-5">
+              <button class="btn" id="btn4"><i class="fa-solid fa-paint-roller fa-2x"></i><br>Painting</button>
+            </div>
+            <div class="col-md pt-5">
+              <button class="btn" id="btn5"><i class="fa-solid fa-broom fa-2x"></i><br>Cleaning</button>
+            </div>
+            <div class="col-md pt-5">
+              <button class="btn" id="btn6"><i class="fa-solid fa-fire fa-2x"></i><br>Trending</button>
+            </div>
+           </div>
+
+              <hr>
+
+              <!-- Section one -->
+            <div class="helpers">
+                <div class="row mt-5">
+                  <div class="col-md-12 pt-5">
+                    <h2 class="text-center">Hire From Our Wide Range Of Skilled Artisan</h2>
+                  </div>
+                </div>
+                
+                <div class="row justify-content-around">
+                  <div class="col-md-3 text-center mt-5 ml-2 help shadow">
+                    <img src="/static/images/icons/helps.png" alt="an helper" class="helps">
+                    <h3 class="pt-2">Abraham Cole</h3>
+                    <p>Plumbing Services</p>
+                    <img src="/static/images/icons/location.png" alt="a location icon" class="img-fluid resizeicon">
+                    <span>Lagos</span> 
+                    <br>
+                    <button class="btn mb-5 mt-4 text-light">Hire Now</button>
+                  </div>
+                  <div class="col-md-3 text-center mt-5 help shadow ">
+                    <img src="/static/images/icons/helps.png" alt="an helper" class="helps">
+                    <h3 class="pt-2">Abimbola Aishat</h3>
+                    <p class=>Home Cleaning Services</p>
+                    <img src="/static/images/icons/location.png" alt="a location icon" class="img-fluid resizeicon">
+                    <span>Ibadan</span> 
+                    <br>
+                    <button class="btn mb-5 mt-4 text-light">Hire Now</button>
+                  </div>
+                  <div class="col-md-3 mt-5 text-center help shadow">
+                    <img src="/static/images/icons/helps.png" alt="an helper" class="helps">
+                    <h3 class="pt-2">Peter Adebankemo</h3>
+                    <p class=>Electrician Services</p>
+                    <img src="/static/images/icons/location.png" alt="a location icon" class="img-fluid resizeicon">
+                    <span>Lagos</span> 
+                    <br>
+                    <button class="btn mb-5 mt-4 text-light">Hire Now</button>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Section two -->
+            <div class="row estimate pt-3 pb-5 justify-content-center">
+                <div class="col-md-2"> 
+                  <span class="text-center pt-3">Furnitures <br> Assemblies: <br> </span>
+                  <span class="text-center span1">15,000+</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="text-center pt-3">Homes Cleaned:</span>
+                  <span class="text-center span1">20,000+</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="text-center pt-3">Homes Repairs:</span>
+                  <span class="text-center span1">13,000+</span>
+                </div>
+                <div class="col-md-2">
+                  <span class="text-center pt-3">Moving tasks:</span>
+                  <span class="text-center span1">30,000+</span>
+                </div>
+            </div>
+
+            <!-- Section three -->
+            <div class="row reviews">
+              <div class="col-md-12 pl-3 pt-5 mt-5 ">
+                <h2 class="pb-3">See what happy customers are saying about HomeHub</h2>
+              </div>
+            </div>
+            <div class="row justify-content-center resize">
+              <div class="col-md-3 p-4">
+                <h3>Elizabeth P. <span><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i></span></h3>
+                <p>"I highly recommend Michael! He fixed my toilet drain quickly and efficiently, with great attention to detail. Communication was clear, and the job was 
+                  completed on time. very satisfied with the results!"
+                </p>
+                <p class="color">Plumbing</p>
+              </div>
+              <div class="col-md-3 p-4">
+                <h3>Destiny E. <span><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i></span></h3>
+                <p>I hired Joe to patch 2 holes on my wall and 1 hole on my ceiling. Joe was great with communication, was fast, professional and did a fantastic job. 
+                  He even came back to do a second layer on the patches to make...</p>
+                  <p class="color">Home repairs</p>
+              </div>
+              <div class="col-md-3 p-4">
+                <h3>Esther p. <span><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i></span></h3>
+                <p>I cant recommend abimbola enough! She did an amazing job cleaning my space, she made sure everything was spotless. Super thorough, on time, and great to work with.</p>
+                  <p class="color">Cleaner</p>
+              </div>
+            </div>
+            
+            <div class="row justify-content-center resize">
+              <div class="col-md-3 p-4">
+                <h3>Elizabeth P. <span><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i></span></h3>
+                <p>Michael did a great job helping us install frameless glass hinged shower doors with an unusual set up. 
+                  He was patient and willing to help figure it out with us. Thank you Michael!</p>
+                <p class="color">Plumbing</p>
+              </div>
+              <div class="col-md-3 p-4">
+                <h3>Destiny E. <span><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i></span></h3>
+                <p>I hired Joe to patch 2 holes on my wall and 1 hole on my ceiling. Joe was great with communication, was fast, professional and did a fantastic job. 
+                  He even came back to do a second layer on the patches to make...</p>
+                  <p class="color">Home repairs</p>
+              </div>
+              <div class="col-md-3 p-4">
+                <h3>Esther p. <span><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i><i class="fa-solid fa-star fa-sm color_star"></i></span></h3>
+                <p>I hired Joe to patch 2 holes on my wall and 1 hole on my ceiling. Joe was great with communication, was fast, professional and did a fantastic job. 
+                  He even came back to do a second layer on the patches to make...</p>
+                  <p class="color">Home repairs</p>
+              </div>
+            </div>
+              
+            
+      
+              <div class="row estimate p-5 justify-content-center">
+                <div class="col-md-10 offset-md-1 pb-3 ">
+                  <h1 class="pb-3">Your Satisfaction, <b style="color:teal">Assured</b> </h1>
+                </div>
+              <div class="col-md-3">
+                <h4>Satisfaction Pledge</h4>
+                <p>If you dont love our service,we'll work to make it right.</p>
+              </div>
+              <div class="col-md-3">
+                <h4>Background Checked</h4>
+                <p>Helpers are always background checked before joining the platform</p>
+              </div>
+              <div class="col-md-3">
+                <h4>Dedicated Support</h4>
+                <p>Friendly customer service when you need us, anytime, everyday of the week</p>
+              </div>
+              </div>
+        
+
+
+              
+              <div class="row how_bg">
+                <div class="col-md-4 offset-md-1 how">
+                  <h3 class="pt-5">How it works</h3>
+                  <i class="fa-solid fa-1 fa-3x pt-3 text-success"></i>
+                  <p>Search and choose an helper around your location by price,skills and reviews.</p>
+
+                  <i class="fa-solid fa-2 fa-3x text-warning"></i>
+                  <p>Your search would be matched with a certified Helper to begin a direct communication.</p>
+
+                  <i class="fa-solid fa-3 fa-3x text-success"></i>
+                  <span>Chat, pay, tip, and review all in one place.</span>
+                </div>
+              </div>
+          
+              <!-- footer -->
+              <div class="row footer-bg">
+                <div class="col-md-12 pl-4">
+                  <h4 class="pt-4"> Follow us! We're friendly: <a href="facebook.com" target="_blank" class="text-decoration-none text-light"><i class="fa-brands fa-square-facebook"></i></a> |<a href=""><i class="fa-brands fa-square-instagram text-decoration-none text-light"></i></a>|
+                  <a href="" class="text-decoration-none text-light"><i class="fa-brands fa-linkedin-in"></i></a>| <a href="twitter.com" class="text-decoration-none text-light"><i class="fa-brands fa-x-twitter"></i></a></h4>
+                </div>
+                <div class="col-md-4 pt-4">
+                  <h4>Trust & Safety</h4>
+                  <p> <a href="" class="text-decoration-none text-light">Privacy Policy</a></p>
+                  <p> <a href="" class="text-decoration-none text-light">Term of use</a></p>
+                </div>
+                <div class="col-md-4 pt-4">
+                  <h4>Company</h4>
+                  <p><a href="/about/" class="text-decoration-none text-light">About us</a></p>
+                  <p><a href="" class="text-decoration-none text-light">Blog</a></p>
+                  <p><a href="" class="text-decoration-none text-light">Become an helper</a></p>
+                </div>
+                <div class="col-md-4 pt-4">
+                  <h4>Subscribe to our newsletter to stay connected</h4>
+                  <input type="text" placeholder="Email Address" class="form-control-lg border-0">
+                  <button class="btn btn-success">Subscribe</button>
+                  <p></p>
+                </div>
+                <hr class="text-light">
+                <p class="text-center text-light">&#169 2024 HomeHelp Inc. All Rights Reserved</p>
+              </div>
+                
+
+        </div>
+      
+
+       
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/jquery-3.7.1.min.js"></script>
+    <script>
+       $(document).ready(function(){
+        
+        $('#search-input').keyup(function(){
+            var searchData = $(this).val()
+            $.ajax({
+                url:'/ajax/search/',
+                type: 'POST',
+                data:{search:searchData, csrf_token:'{{csrf_token()}}'},
+                beforeSend:function(){
+                    $('#show').html('<img src="/static/images/gif/spinner.gif">')
+                },
+                success:function(resp){
+                    $('#show').html(resp)
+                },
+                error:function(err){
+                    console.log(err);
+                }
+            })
+           })
+
+        
+      })
+    </script>
+</body>
+</html>

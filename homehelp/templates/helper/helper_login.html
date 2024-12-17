@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+         *{
+	      padding:0px;
+	      margin:0px;
+	      box-sizing:border-box;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
+       
+       .pad{
+        padding-left: 100px;
+       }
+
+
+       .logo{
+          font-size: 40px;
+        }
+
+        .bg{
+            background-color: beige;
+            min-height: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <div class="pad">
+            <a class="navbar-brand logo" href="#">HomeHelp</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto links">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <hr>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center pt-5">
+            <div class="col-md-6">
+                <img src="/static/images/how.jpg" alt="homehelp" class="img-fluid img-thumbnail">
+            </div>
+            <div class="col-md-6 ">
+                <h1 class="text-center mb-5">Login</h1>
+                    <form action="">
+                        {{ helploginform.csrf_token }}
+                        
+                        {{ helploginform.email(placeholder='Email', class_='form-control mb-4')}}
+                        <!-- <input type="text" placeholder="Email" class="form-control mb-4"> -->
+                         {{ helploginform.password(placeholder='Password, class_='form-control mb-4)}}
+                        <!-- <input type="password" placeholder="Password" class="form-control mb-4"> -->
+                         {{ helploginform.submit(class_='btn mb-3 col-md-12 style='color:teal')}}
+                        <!-- <button class="btn mb-3 col-md-12" style="background-color:teal">Login</button> -->
+                    </form>
+                
+            </div>
+        </div>
+    </div>
+    <script src="/homehelp/static/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
